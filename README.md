@@ -3,7 +3,7 @@ Example codes for using UDP communication in MATLAB
 
 # Using `typecast`
 - [`typecast(X, type)`](https://www.mathworks.com/help/matlab/ref/typecast.html) converts the bit patterns of `X` to the data type specified by `type` without changing the underlying data
-- When you use `typecast` to convert `int16` values to `uint8`, the negative values will be stored as _two's complement_
+- When you use `typecast()` to convert `int16` values to `uint8`, the negative values will be stored as _two's complement_
 - When you cast the `uint8` values back to `int16`, MATLAB will correctly interpret the _two's complement_ representation and return the original negative values
 
 For example
@@ -25,7 +25,7 @@ x3 = typecast(x2, 'int16')
 >     1x3 int16 row vector
 >      40    -25    50
 
-Notice that when you convert `int16` to `uint8` with `typecast`, the size of the vector becomes doubled
+Notice that when you convert `int16` to `uint8` with `typecast()`, the size of the vector becomes doubled
 
 # Converting `float` to `int`
 - An easy way to convert from `float` to `int` values is to scale the values (multiply) by 10,  100, 1000, etc.
